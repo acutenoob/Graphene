@@ -14,6 +14,10 @@ public class CoolConfig {
     private static Consumer<Void> changeListener;
     public static final ForgeConfigSpec.BooleanValue skipFramebufferCopy;
     public static final ForgeConfigSpec.BooleanValue skipOutlineWhenNoGlowing;
+    //minecraft高版本优化内容移植
+    public static final ForgeConfigSpec.BooleanValue ENABLE_SUBSTEP;
+    public static final ForgeConfigSpec.BooleanValue FIX_PEARL_LEAK;
+    public static final ForgeConfigSpec.BooleanValue FIX_PROJECTILE_LERP;
     // ==================== 渲染优化 | Rendering Optimization ====================
     public static final ForgeConfigSpec.BooleanValue ENABLEDCULL;
     public static final ForgeConfigSpec.IntValue CULLING_DEPTH;
@@ -88,6 +92,11 @@ public class CoolConfig {
     public static final ForgeConfigSpec.BooleanValue DEBUG_LOGGING;
 
     static {
+        BUILDER.push("高版本mc优化移植");
+        ENABLE_SUBSTEP   = BUILDER.define("enableSubStepCollision", true);
+        FIX_PEARL_LEAK   = BUILDER.define("fixPearlChunkLeak", true);
+        FIX_PROJECTILE_LERP = BUILDER.define("fixProjectileInterpolation", true);
+        BUILDER.pop();
         // ==================== 渲染优化设置 | Rendering Optimization Settings ====================
         BUILDER.push("渲染优化 | Rendering Optimization");
         skipFramebufferCopy = BUILDER

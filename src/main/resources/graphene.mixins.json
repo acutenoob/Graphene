@@ -2,14 +2,50 @@
   "required": true,
   "minVersion": "0.8",
   "package": "net.carbonmc.graphene.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_17",
   "refmap": "graphene.refmap.json",
   "mixins": [
+    "stack.fix.BucketItemAccessor",
+    "stack.fix.BucketItem",
+    "stack.InventoryMixin",
+    "stack.ItemEntityMixin",
+    "stack.ItemStackMixin",
+    "other.MixinJigsawBlockEntity",
+    "other.MixinStructureTemplate",
+    "other.DFUKILLER",
+    "other.EventListenerTransformerMixin",
+    "other.MixinBoat",
+    "other.MixinServerLevel",
+    "tickstop.EntityTypeMixin",
+    "tickstop.LevelMixin",
+    "MOFRP.EnderPearlMixin",
+    "MOFRP.EntityCollisionMixin"
   ],
   "client": [
+    "client.chest.OptimizedChestBlockMixin",
+    "client.chest.OptimizedChestRenderer",
+    "client.chest.OptimizedEnderChestMixin",
+    "client.culling.EntityRendererMixin",
+    "client.culling.LeafRenderMixin",
+    "client.culling.EntityRendererMixin",
+    "client.culling.LevelRendererMixin",
+    "client.fix.EnchantmentMenuMixin",
+    "client.fps.MinecraftMixin",
+    "client.fps.OptionsMixin",
+    "client.lang.uimixin",
+    "client.lang.mcmixinx",
+    "client.light.FastBamboo",
+    "client.renderer.fix.EntityNameRendererMixin",
+    "client.renderer.jump.EntityJumpRendererMixin",
+    "client.renderer.other.MixinPoseStack",
+    "client.renderer.other.MixinVertexConsumer",
+    "client.renderer.skip.FramebufferMixin",
+    "client.renderer.skip.MainTargetMixin",
+    "client.renderer.sky.MixinWorldRenderer"
   ],
   "injectors": {
-    "defaultRequire": 1
+    "defaultRequire": 1,
+    "maxShiftBy": 5
   },
   "overwrites": {
     "requireAnnotations": true
