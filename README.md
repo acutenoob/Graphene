@@ -1,7 +1,7 @@
-Moonlit Performance Enhancement Module (MPEM) → Graphene
+Graphene
 
 📖 Overview
-Notice: This mod has been permanently discontinued and rebranded as Graphene. All future development will continue under the new name.
+Notice: MPEM mod has been permanently discontinued and rebranded as Graphene. All future development will continue under the new name.
 
 Graphene is a free, powerful optimization mod for Minecraft 1.19.4+ that fixes vanilla issues and significantly improves performance.
 
