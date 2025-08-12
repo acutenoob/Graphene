@@ -1,5 +1,7 @@
 package net.carbonmc.graphene.async.sound;
 
+import net.carbonmc.graphene.AsyncHandler;
+import net.carbonmc.graphene.async.AsyncSystemInitializer;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.protocol.game.ClientboundSoundPacket;
@@ -9,8 +11,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.carbonmc.graphene.AsyncHandler;
-import net.carbonmc.graphene.async.AsyncSystemInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

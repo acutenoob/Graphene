@@ -1,10 +1,10 @@
 package net.carbonmc.graphene.optimization;
 
+import net.carbonmc.graphene.config.CoolConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.carbonmc.graphene.config.CoolConfig;
 
 public class MemoryCleaner {
     private long lastCleanTime = 0;

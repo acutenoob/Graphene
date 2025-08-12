@@ -1,8 +1,8 @@
 package net.carbonmc.graphene;
 
+import net.carbonmc.graphene.config.CoolConfig;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.fml.loading.FMLEnvironment;
-import net.carbonmc.graphene.config.CoolConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

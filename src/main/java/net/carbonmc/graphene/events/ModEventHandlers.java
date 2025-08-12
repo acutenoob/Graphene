@@ -2,10 +2,10 @@ package net.carbonmc.graphene.events;
 
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.carbonmc.graphene.AsyncHandler;
 import net.carbonmc.graphene.particles.AsyncParticleHandler;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 import java.util.concurrent.TimeUnit;
 

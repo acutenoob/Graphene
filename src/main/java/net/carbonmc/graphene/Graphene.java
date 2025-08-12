@@ -1,5 +1,12 @@
 package net.carbonmc.graphene;
 
+import net.carbonmc.graphene.async.AsyncSystemInitializer;
+import net.carbonmc.graphene.client.ItemCountRenderer;
+import net.carbonmc.graphene.config.CoolConfig;
+import net.carbonmc.graphene.engine.cull.RenderOptimizer;
+import net.carbonmc.graphene.events.ModEventHandlers;
+import net.carbonmc.graphene.particles.AsyncParticleHandler;
+import net.carbonmc.graphene.util.KillMobsCommand;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
@@ -14,16 +21,10 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.carbonmc.graphene.async.AsyncSystemInitializer;
-import net.carbonmc.graphene.client.ItemCountRenderer;
-import net.carbonmc.graphene.config.CoolConfig;
-import net.carbonmc.graphene.engine.cull.RenderOptimizer;
-import net.carbonmc.graphene.events.ModEventHandlers;
-import net.carbonmc.graphene.particles.AsyncParticleHandler;
-import net.carbonmc.graphene.util.KillMobsCommand;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.spongepowered.asm.launch.MixinBootstrap;
+
 import java.io.File;
 import java.util.concurrent.atomic.AtomicBoolean;
 @Mod(value = "graphene")

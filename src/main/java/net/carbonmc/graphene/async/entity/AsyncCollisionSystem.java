@@ -1,10 +1,10 @@
 package net.carbonmc.graphene.async.entity;
 
+import net.carbonmc.graphene.AsyncHandler;
+import net.carbonmc.graphene.async.AsyncSystemInitializer;
 import net.minecraft.world.entity.Entity;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.carbonmc.graphene.AsyncHandler;
-import net.carbonmc.graphene.async.AsyncSystemInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

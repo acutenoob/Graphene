@@ -1,8 +1,8 @@
 package net.carbonmc.graphene.mixin.tickstop;
 
+import net.carbonmc.graphene.EntityTickHelper;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
-import net.carbonmc.graphene.EntityTickHelper;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

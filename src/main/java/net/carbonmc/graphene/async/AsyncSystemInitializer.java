@@ -1,7 +1,5 @@
 package net.carbonmc.graphene.async;
 
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.carbonmc.graphene.AsyncHandler;
 import net.carbonmc.graphene.async.entity.AsyncAIManager;
 import net.carbonmc.graphene.async.entity.AsyncCollisionSystem;
@@ -10,6 +8,8 @@ import net.carbonmc.graphene.async.redstone.AsyncRedstone;
 import net.carbonmc.graphene.async.resources.AsyncResourceLoader;
 import net.carbonmc.graphene.async.sound.AsyncSoundSystem;
 import net.carbonmc.graphene.async.world.StructureGenAsync;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

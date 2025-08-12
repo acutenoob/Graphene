@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(Entity.class)
 public abstract class EntityCollisionMixin {
-
+    //1.20.2以上不移植
     @Inject(method = "move", at = @At("HEAD"), cancellable = true)
     private void graphene$subStepMove(net.minecraft.world.entity.MoverType type, Vec3 delta, CallbackInfo ci) {
         if (!CoolConfig.ENABLE_SUBSTEP.get()) return;

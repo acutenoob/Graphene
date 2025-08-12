@@ -2,12 +2,11 @@ package net.carbonmc.graphene.mixin.MOFRP;
 
 import net.carbonmc.graphene.config.CoolConfig;
 import net.carbonmc.graphene.util.PearlsChunkMap;
+import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.projectile.ThrownEnderpearl;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.core.BlockPos;
 import net.minecraft.world.phys.HitResult;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -18,7 +17,7 @@ import java.util.UUID;
 
 @Mixin(ThrownEnderpearl.class)
 public class EnderPearlMixin {
-
+    //1.20.2以上不移植
     @Inject(method = "tick", at = @At("HEAD"))
     private void graphene$onTick(CallbackInfo ci) {
         if (!CoolConfig.FIX_PEARL_LEAK.get()) return;

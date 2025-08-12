@@ -1,13 +1,13 @@
 package net.carbonmc.graphene.async.entity;
 
+import net.carbonmc.graphene.AsyncHandler;
+import net.carbonmc.graphene.async.AsyncSystemInitializer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.level.pathfinder.Path;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.carbonmc.graphene.AsyncHandler;
-import net.carbonmc.graphene.async.AsyncSystemInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

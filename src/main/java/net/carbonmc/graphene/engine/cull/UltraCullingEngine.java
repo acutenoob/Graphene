@@ -2,13 +2,13 @@ package net.carbonmc.graphene.engine.cull;
 
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
+import net.carbonmc.graphene.config.CoolConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
-import net.carbonmc.graphene.config.CoolConfig;
 
 import java.util.concurrent.TimeUnit;
 

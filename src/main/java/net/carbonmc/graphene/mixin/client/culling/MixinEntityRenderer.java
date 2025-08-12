@@ -1,9 +1,9 @@
 package net.carbonmc.graphene.mixin.client.culling;
 
+import net.carbonmc.graphene.engine.cull.CullingEngineManager;
 import net.minecraft.client.renderer.culling.Frustum;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.world.entity.Entity;
-import net.carbonmc.graphene.engine.cull.CullingEngineManager;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

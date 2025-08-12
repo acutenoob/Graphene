@@ -2,11 +2,11 @@
 package net.carbonmc.graphene.mixin.client.renderer.jump;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import net.carbonmc.graphene.config.CoolConfig;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.OutlineBufferSource;
 import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
 import net.minecraft.world.entity.Entity;
-import net.carbonmc.graphene.config.CoolConfig;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

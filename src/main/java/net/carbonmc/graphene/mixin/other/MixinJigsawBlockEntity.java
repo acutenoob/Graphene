@@ -1,8 +1,8 @@
 package net.carbonmc.graphene.mixin.other;
 
+import net.carbonmc.graphene.util.KryoNBTUtil;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.entity.JigsawBlockEntity;
-import net.carbonmc.graphene.util.KryoNBTUtil;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;

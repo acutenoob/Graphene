@@ -2,12 +2,12 @@ package net.carbonmc.graphene;
 
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
+import net.carbonmc.graphene.config.CoolConfig;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLEnvironment;
 import net.minecraftforge.forgespi.language.ModFileScanData;
-import net.carbonmc.graphene.config.CoolConfig;
 import org.apache.commons.io.FileUtils;
 import org.objectweb.asm.Type;
 

@@ -1,11 +1,11 @@
 package net.carbonmc.graphene.optimization;
 
+import net.carbonmc.graphene.config.CoolConfig;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.event.entity.EntityLeaveLevelEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.carbonmc.graphene.config.CoolConfig;
 
 import java.util.Iterator;
 import java.util.Map;

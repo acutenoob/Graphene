@@ -1,10 +1,10 @@
 package net.carbonmc.graphene;
 
+import net.carbonmc.graphene.config.CoolConfig;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.carbonmc.graphene.config.CoolConfig;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;

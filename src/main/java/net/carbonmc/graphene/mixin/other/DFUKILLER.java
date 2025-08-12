@@ -1,9 +1,9 @@
 package net.carbonmc.graphene.mixin.other;
 
 import com.mojang.datafixers.DataFixerBuilder;
-import net.minecraft.util.datafix.DataFixers;
 import net.carbonmc.graphene.AsyncHandler;
 import net.carbonmc.graphene.LazyDataFixerBuilder;
+import net.minecraft.util.datafix.DataFixers;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;

@@ -1,10 +1,10 @@
 package net.carbonmc.graphene.mixin.other;
 
+import net.carbonmc.graphene.util.KryoNBTUtil;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
-import net.carbonmc.graphene.util.KryoNBTUtil;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

@@ -1,5 +1,7 @@
 package net.carbonmc.graphene.async.resources;
 
+import net.carbonmc.graphene.AsyncHandler;
+import net.carbonmc.graphene.async.AsyncSystemInitializer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.packs.PackResources;
 import net.minecraft.server.packs.PackType;
@@ -8,8 +10,6 @@ import net.minecraft.server.packs.repository.PackRepository;
 import net.minecraft.server.packs.repository.PackSource;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.carbonmc.graphene.AsyncHandler;
-import net.carbonmc.graphene.async.AsyncSystemInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

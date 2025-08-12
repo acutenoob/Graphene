@@ -1,8 +1,8 @@
 package net.carbonmc.graphene;
 
+import net.carbonmc.graphene.config.CoolConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.Options;
-import net.carbonmc.graphene.config.CoolConfig;
 
 public class FrameRateController {
     public static int getActiveFrameRateLimit() {
