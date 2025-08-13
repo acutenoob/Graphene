@@ -2,6 +2,7 @@ package net.carbonmc.graphene;
 
 import net.carbonmc.graphene.async.AsyncSystemInitializer;
 import net.carbonmc.graphene.client.ItemCountRenderer;
+import net.carbonmc.graphene.client.gui.ClothConfigScreenFactory;
 import net.carbonmc.graphene.config.CoolConfig;
 import net.carbonmc.graphene.engine.cull.RenderOptimizer;
 import net.carbonmc.graphene.events.ModEventHandlers;
@@ -9,6 +10,7 @@ import net.carbonmc.graphene.particles.AsyncParticleHandler;
 import net.carbonmc.graphene.util.KillMobsCommand;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.ConfigScreenHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.TickEvent;
@@ -56,6 +58,12 @@ public class Graphene {
 		LOGGER.info("Initializing Graphene MOD v{}", VERSION);
 		LOGGER.info("请确保模组名称前面有英文半角符号的'!',这样模组才会第一个加载！会带来更好的优化！");
 		LOGGER.info("CarbonMC玩家QQ交流群：372378451");
+		ModLoadingContext.get().registerExtensionPoint(
+				ConfigScreenHandler.ConfigScreenFactory.class,
+				() -> new ConfigScreenHandler.ConfigScreenFactory(
+						(mc, parent) -> ClothConfigScreenFactory.create(parent)
+				)
+		);
 
 		ModLoadingContext.get().registerExtensionPoint(
 				IExtensionPoint.DisplayTest.class,
@@ -66,6 +74,7 @@ public class Graphene {
 	 * @author Red flag with 5 stars--RedStar
 	 * @reason 检测
 	 */
+
 	private void setupClient(final FMLClientSetupEvent event) {
 
 		RenderOptimizer.initialize();
@@ -98,6 +107,7 @@ public class Graphene {
 
 		});
 	}
+
 	@SubscribeEvent
 	public void onRegisterCommands(RegisterCommandsEvent event) {
 		KillMobsCommand.register(event.getDispatcher());

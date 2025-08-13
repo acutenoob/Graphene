@@ -28,13 +28,13 @@ public class AsyncParticleHandler {
                     0L, TimeUnit.MILLISECONDS,
                     new LinkedBlockingQueue<>(),
                     r -> {
-                        Thread t = new Thread(r, "Async Particle Worker");
+                        Thread t = new Thread(r, "Async particle Worker");
                         t.setDaemon(true);
                         return t;
                     }
             );
 
-            LOGGER.info("Async Particle System initialized with {} threads", threads);
+            LOGGER.info("Async particle System initialized with {} threads", threads);
         }
     }
 

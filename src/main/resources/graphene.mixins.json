@@ -38,9 +38,10 @@
     "client.renderer.jump.EntityJumpRendererMixin",
     "client.renderer.other.MixinPoseStack",
     "client.renderer.other.MixinVertexConsumer",
-    "client.renderer.skip.FramebufferMixin",
-    "client.renderer.skip.MainTargetMixin",
-    "client.renderer.sky.MixinWorldRenderer"
+    "client.renderer.sky.MixinWorldRenderer",
+    "client.renderer.particle.MixinParticleEngine",
+    "client.renderer.particle.MixinParticle",
+    "client.renderer.particle.ParticleAccessor"
   ],
   "injectors": {
     "defaultRequire": 1,

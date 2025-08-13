@@ -15,7 +15,16 @@ public class CoolConfig {
     public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     public static ForgeConfigSpec SPEC;
     private static Consumer<Void> changeListener;
-    public static final ForgeConfigSpec.BooleanValue skipFramebufferCopy;
+    //粒子
+    public static final ForgeConfigSpec.BooleanValue ENABLE_PARTICLE_OPTIMIZATION;
+    public static final ForgeConfigSpec.BooleanValue ENABLE_PARTICLE_LOD;
+    public static final ForgeConfigSpec.DoubleValue LOD_DISTANCE_THRESHOLD;
+    public static final ForgeConfigSpec.DoubleValue LOD_REDUCTION_FACTOR;
+    public static final ForgeConfigSpec.BooleanValue ENABLE_FIXED_TIMESTEP;
+    public static final ForgeConfigSpec.DoubleValue FIXED_TIMESTEP_INTERVAL;
+    public static final ForgeConfigSpec.ConfigValue<List<? extends String>> LOD_PARTICLE_WHITELIST;
+    public static final ForgeConfigSpec.ConfigValue<List<? extends String>> LOD_PARTICLE_BLACKLIST;
+    //
     public static final ForgeConfigSpec.BooleanValue skipOutlineWhenNoGlowing;
     //minecraft高版本优化内容移植
     public static final ForgeConfigSpec.BooleanValue ENABLE_SUBSTEP;
@@ -95,6 +104,52 @@ public class CoolConfig {
     public static final ForgeConfigSpec.BooleanValue DEBUG_LOGGING;
 
     static {
+        BUILDER.push("粒子优化 | particle Optimization");
+        ENABLE_PARTICLE_OPTIMIZATION = BUILDER.comment(
+                        "启用粒子系统优化",
+                        "Enable particle system optimizations")
+                .define("enableParticleOptimization", true);
+
+        ENABLE_PARTICLE_LOD = BUILDER.comment(
+                        "启用粒子LOD系统 (Level of Detail)",
+                        "Enable particle LOD system (Level of Detail)")
+                .define("enableParticleLOD", true);
+
+        LOD_DISTANCE_THRESHOLD = BUILDER.comment(
+                        "LOD距离阈值 (方块)",
+                        "Distance threshold for LOD reduction (blocks)")
+                .defineInRange("lodDistanceThreshold", 16.0, 4.0, 64.0);
+
+        LOD_REDUCTION_FACTOR = BUILDER.comment(
+                        "LOD减少因子 (0.0-1.0)",
+                        "Reduction factor for LOD (0.0-1.0)")
+                .defineInRange("lodReductionFactor", 0.3, 0.0, 1.0);
+
+        ENABLE_FIXED_TIMESTEP = BUILDER.comment(
+                        "启用固定时间步长",
+                        "Enable fixed timestep for particle physics")
+                .define("enableFixedTimestep", true);
+
+        FIXED_TIMESTEP_INTERVAL = BUILDER.comment(
+                        "固定时间步长间隔 (秒)",
+                        "Fixed timestep interval in seconds")
+                .defineInRange("fixedTimestepInterval", 0.05, 0.001, 0.1);
+
+        LOD_PARTICLE_WHITELIST = BUILDER.comment(
+                        "始终应用LOD的粒子类型 (即使不在低优先级列表)",
+                        "particle types that always use LOD (even if not low priority)")
+                .defineList("lodParticleWhitelist",
+                        List.of("minecraft:rain", "minecraft:smoke"),
+                        o -> o instanceof String);
+
+        LOD_PARTICLE_BLACKLIST = BUILDER.comment(
+                        "从不应用LOD的粒子类型",
+                        "particle types that never use LOD")
+                .defineList("lodParticleBlacklist",
+                        List.of("minecraft:portal", "minecraft:enchant"),
+                        o -> o instanceof String);
+
+        BUILDER.pop(); // 粒子优化
         BUILDER.push("高版本mc优化移植");
         ENABLE_SUBSTEP   = BUILDER.define("enableSubStepCollision", true);
         FIX_PEARL_LEAK   = BUILDER.define("fixPearlChunkLeak", true);
@@ -102,9 +157,6 @@ public class CoolConfig {
         BUILDER.pop();
         // ==================== 渲染优化设置 | Rendering Optimization Settings ====================
         BUILDER.push("渲染优化 | Rendering Optimization");
-        skipFramebufferCopy = BUILDER
-                .comment("Skip framebuffer copy operations, render directly to default framebuffer")
-                .define("skipFramebufferCopy", false);
         skipOutlineWhenNoGlowing = BUILDER
                 .comment("Skip outline rendering when no glowing entities are in view")
                 .define("skipOutlineWhenNoGlowing", true);
